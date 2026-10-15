@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d3366">
+  <meta name="description" content="Portal do Portal — informação, serviços e comunidade.">
+  <title>Portal do Portal | Informação, serviços e comunidade</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="#inicio" aria-label="Portal do Portal - início">
+    <img src="./assets/icon.svg" alt="" class="brand-icon">
+    <span>Portal <b>do Portal</b><small>INFORMAÇÃO · SERVIÇOS · COMUNIDADE</small></span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  <nav id="nav">
+    <a href="#inicio">Início</a><a href="#mural">Mural</a><a href="#servicos">Serviços</a>
+    <a href="#bazar">Bazar</a><a href="#agenda">Agenda</a><a href="#achados">Achados e perdidos</a>
+    <a class="nav-button" href="#contribuir">Envie sua contribuição</a>
+  </nav>
+</header>
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero-copy">
+      <p class="eyebrow">UM ESPAÇO FEITO PARA A COMUNIDADE</p>
+      <h1>Mais conexão e praticidade para o <em>nosso dia a dia.</em></h1>
+      <p>Informação, serviços e comunidade em um só lugar. Um portal independente para compartilhar informações úteis entre moradores.</p>
+      <a class="button orange" href="#atalhos">Explore o portal <span>↗</span></a>
+      <p class="independent-note">Iniciativa comunitária independente. Não é um canal oficial do condomínio.</p>
+    </div>
+    <div class="hero-illustration" role="img" aria-label="Ilustração de prédios em azul escuro e laranja">
+      <div class="sky-circle"></div><div class="building b1"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="building b2"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="building b3"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="ground"></div><span class="illustration-caption">A comunidade em um só lugar</span>
+    </div>
+  </section>
+
+  <section class="shortcut-section" id="atalhos">
+    <a class="shortcut" href="#mural"><span class="shortcut-icon">▤</span><b>Mural comunitário</b><small>Avisos e informações</small></a>
+    <a class="shortcut" href="#servicos"><span class="shortcut-icon">⚒</span><b>Guia de serviços</b><small>Indicações úteis</small></a>
+    <a class="shortcut" href="#bazar"><span class="shortcut-icon">↔</span><b>Bazar dos moradores</b><small>Venda, troca e doação</small></a>
+    <a class="shortcut" href="#agenda"><span class="shortcut-icon">▦</span><b>Agenda comunitária</b><small>Eventos e campanhas</small></a>
+    <a class="shortcut" href="#achados"><span class="shortcut-icon">⌕</span><b>Achados e perdidos</b><small>Itens encontrados</small></a>
+    <a class="shortcut" href="#contribuir"><span class="shortcut-icon">↗</span><b>Envie sua contribuição</b><small>Compartilhe uma informação</small></a>
+  </section>
+
+  <section class="section" id="mural">
+    <div class="section-heading"><div><p class="eyebrow">FIQUE POR DENTRO</p><h2>Mural <em>comunitário</em></h2></div><p>Informações úteis compartilhadas e revisadas antes de serem publicadas.</p></div>
+    <div class="cards" id="newsGrid"></div>
+  </section>
+
+  <section class="section tinted" id="servicos">
+    <div class="section-heading"><div><p class="eyebrow">INDICAÇÕES DA COMUNIDADE</p><h2>Guia de <em>serviços</em></h2></div><p>Consulte contatos de prestadores. As indicações não representam garantia ou endosso do portal.</p></div>
+    <div class="filter-row"><input id="serviceSearch" type="search" placeholder="Buscar por serviço ou categoria..." aria-label="Buscar serviços"><div id="serviceFilters" class="filters"></div></div>
+    <div class="cards" id="servicesGrid"></div>
+  </section>
+
+  <section class="section" id="bazar">
+    <div class="section-heading"><div><p class="eyebrow">REUTILIZE E COMPARTILHE</p><h2>Bazar dos <em>moradores</em></h2></div><p>Anúncios enviados pelos moradores e publicados após curadoria. Negociações são feitas diretamente entre as partes.</p></div>
+    <div class="filter-row"><input id="marketSearch" type="search" placeholder="Buscar anúncios..." aria-label="Buscar anúncios"><div id="marketFilters" class="filters"></div></div>
+    <div class="cards" id="marketGrid"></div>
+  </section>
+
+  <section class="section tinted" id="agenda">
+    <div class="section-heading"><div><p class="eyebrow">ANOTE NA AGENDA</p><h2>Agenda <em>comunitária</em></h2></div><p>Eventos, campanhas e atividades confirmadas para compartilhar com a comunidade.</p></div>
+    <div class="cards" id="eventsGrid"></div>
+  </section>
+
+  <section class="section" id="achados">
+    <div class="section-heading"><div><p class="eyebrow">PODEMOS AJUDAR?</p><h2>Achados e <em>perdidos</em></h2></div><p>Não publique documentos, números de apartamento, telefones ou outros dados pessoais. Combine a devolução de forma segura.</p></div>
+    <div class="cards" id="lostGrid"></div>
+  </section>
+
+  <section class="contribute" id="contribuir">
+    <div><p class="eyebrow light">FAÇA PARTE</p><h2>Tem uma informação<br>para compartilhar?</h2><p>Envie uma sugestão, aviso, indicação de serviço ou anúncio para análise. A publicação não é automática: todo conteúdo passa por curadoria.</p></div>
+    <div class="contribute-card"><div class="round-icon">↗</div><h3>Envie sua contribuição</h3><p>Fale com a pessoa responsável pelo portal para encaminhar sua sugestão.</p><a id="whatsappButton" class="button orange full" href="#contato">Configurar WhatsApp</a><small>O contato precisa ser configurado no arquivo <code>config.js</code>.</small></div>
+  </section>
+
+  <section class="section contact" id="contato"><div><p class="eyebrow">SOBRE O PORTAL</p><h2>Uma comunidade mais <em>conectada.</em></h2></div><div><p>O Portal do Portal é um projeto comunitário independente, criado para facilitar o acesso a informações úteis e incentivar a colaboração entre moradores.</p><p class="notice"><b>Transparência:</b> o portal não se apresenta como canal oficial do condomínio e não possui vínculo institucional declarado. Conteúdos e indicações devem ser verificados por quem os utiliza.</p><p id="contactLine">Contato: pendente de configuração.</p></div></section>
+</main>
+<footer><a class="brand footer-brand" href="#inicio"><img src="./assets/icon.svg" alt=""><span>Portal <b>do Portal</b><small>INFORMAÇÃO · SERVIÇOS · COMUNIDADE</small></span></a><p>Juntos, fazemos uma comunidade melhor.</p><small>© <span id="year"></span> Portal do Portal · Projeto independente</small></footer>
+<script src="./config.js"></script><script src="./app.js"></script>
+</body></html>

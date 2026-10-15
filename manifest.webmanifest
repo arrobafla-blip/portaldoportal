@@ -1,0 +1,12 @@
+{
+  "name": "Portal do Portal",
+  "short_name": "Portal do Portal",
+  "description": "Informação, serviços e comunidade.",
+  "lang": "pt-BR",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8f7f2",
+  "theme_color": "#0d3366",
+  "icons": [{"src":"./assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
